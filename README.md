@@ -149,9 +149,7 @@ Full detail, impact analysis, and remediation guidance for each finding is avail
 
 ## 8. Repository Contents
 
-```
-```
-
+``
 *(Raw recovered documents, the database backup, and unredacted staff or shareholder data are withheld from this public repository and were provided to the client and instructor separately, in line with responsible handling of sensitive data.)*
 
 ## 9. Skills Demonstrated
