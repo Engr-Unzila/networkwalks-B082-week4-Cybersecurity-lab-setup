@@ -11,7 +11,7 @@
 <table>
 <tr><td><b>Program</b></td><td>Networkwalks Penetration Testing Training Program</td></tr>
 <tr><td><b>Batch</b></td><td>B082 - Week 4</td></tr>
-<tr><td><b>Prepared By</b></td><td>Nashra</td></tr>
+<tr><td><b>Prepared By</b></td><td>Unzila</td></tr>
 <tr><td><b>Mentor</b></td><td>Waqas Karim, CCIE</td></tr>
 <tr><td><b>Client</b></td><td>Mediroza General Hospital</td></tr>
 <tr><td><b>Target</b></td><td><code>https://medirozahospital.com</code></td></tr>
@@ -184,11 +184,11 @@ Full detail, impact analysis, and remediation guidance for each finding is avail
 
 ## Thank You
 
-**Prepared by Nashra**
+**Prepared by Unzila**
 **Mentor: Waqas Karim, CCIE**
 Networkwalks Batch B082 - Week 4
 
-LinkedIn: www.linkedin.com/in/nashrah-bashir
+LinkedIn: https://www.linkedin.com/in/unzila-tanveer-71144139b
 
 Target: `https://medirozahospital.com`
 
