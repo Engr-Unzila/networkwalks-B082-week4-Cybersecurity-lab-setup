@@ -80,41 +80,33 @@ The assessment followed a standard black-box methodology: reconnaissance, manual
 ### F1: Authentication Bypass, Patient Portal (Critical)
 The login form on the patient portal did not properly validate or sanitise user-supplied input before using it in a backend query, allowing the authentication check to be bypassed without valid credentials.
 
-<p align="center">
-<img src="evidence/01_authentication_bypass.png" width="480" alt="Patient portal login form showing successful authentication bypass, submitted value redacted"><br>
-<sub><i>Figure 1: Patient portal login form after a successful authentication bypass. The submitted value has been redacted.</i></sub>
-</p>
+<img width="888" height="627" alt="image" src="https://github.com/user-attachments/assets/adf11565-c4b6-467a-8f54-3a354c5cad0a" />
+
 
 ### F2: Broken Access Control, Cross-Patient Data Exposure (High)
 Once past authentication, the portal returned lab reports belonging to multiple, unrelated patients rather than scoping results to a single verified identity, confirming an absence of server-side authorisation checks.
 
-<p align="center">
-<img src="evidence/02_broken_access_control.png" width="520" alt="Portal listing lab reports for multiple unrelated patients, names redacted"><br>
-<sub><i>Figure 2: The portal returning reports for multiple unrelated patients. Names and reference numbers have been redacted.</i></sub>
+
+<img width="1114" height="669" alt="image" src="https://github.com/user-attachments/assets/492b6363-e2be-4125-a334-0e11908974a1" />
+Figure 2: The portal returning reports for multiple unrelated patients. Names and reference numbers have been redacted.</i></sub>
 </p>
 
 ### F3: Weak Protection on Distributed Patient Documents (High)
 The documents retrieved from the portal were protected, but the protection could be defeated in a short time using standard offline recovery techniques and common wordlists.
 
-<p align="center">
-<img src="evidence/03_password_recovery_process.png" width="380" alt="Terminal showing offline document password recovery tooling, hash values redacted"><br>
-<sub><i>Figure 3: Offline recovery tooling used to defeat document protection. Recovered hash values have been redacted.</i></sub>
-</p>
 
 ### F4: Sensitive Information Disclosure via Document Metadata (Medium)
 Reviewing the metadata of a recovered document revealed an internal note left behind by hospital IT staff. This detail was not intended for external distribution and pointed toward a further exposure on the server, which was investigated and confirmed as F5.
 
-<p align="center">
-<img src="evidence/04_recovered_document_sample.png" width="420" alt="Decrypted pathology report with patient-identifying fields redacted"><br>
-<sub><i>Figure 4: A successfully decrypted lab report. Patient-identifying fields have been redacted.</i></sub>
+<img width="739" height="654" alt="image" src="https://github.com/user-attachments/assets/f6df9cfd-a9a9-4af3-a69a-f2f30d10deef" />
+Figure 4: A successfully decrypted lab report. Patient-identifying fields have been redacted.</i></sub>
 </p>
 
 ### F5: Directory Listing Enabled, Exposed Database Backup (Critical)
 A legacy directory on the webserver was found to have directory listing enabled, exposing a database backup file that could be downloaded without any authentication.
 
-<p align="center">
-<img src="evidence/05_exposed_backup_resource.png" width="540" alt="Unauthenticated directory listing exposing a legacy database backup, filename redacted"><br>
-<sub><i>Figure 5: An unauthenticated directory listing exposing a legacy database backup. The exact filename has been redacted.</i></sub>
+<img width="1600" height="532" alt="image" src="https://github.com/user-attachments/assets/61d108d4-5f62-49d5-82d4-57d265492fd1" />
+Figure 5: An unauthenticated directory listing exposing a legacy database backup. The exact filename has been redacted.</i></sub>
 </p>
 
 ### F6: Confidential HR & Shareholder Data Exposure (Critical)
