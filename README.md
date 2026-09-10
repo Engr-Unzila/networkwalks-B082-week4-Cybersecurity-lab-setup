@@ -94,6 +94,8 @@ Figure 2: The portal returning reports for multiple unrelated patients. Names an
 ### F3: Weak Protection on Distributed Patient Documents (High)
 The documents retrieved from the portal were protected, but the protection could be defeated in a short time using standard offline recovery techniques and common wordlists.
 
+<img width="1349" height="1166" alt="AdobeExpressPhotos_cf8dec45622f4cf98fec3b35b64b4537_CopyEdited" src="https://github.com/user-attachments/assets/11ef2005-45ff-4425-9a52-6bf1d8e63201" />
+
 
 ### F4: Sensitive Information Disclosure via Document Metadata (Medium)
 Reviewing the metadata of a recovered document revealed an internal note left behind by hospital IT staff. This detail was not intended for external distribution and pointed toward a further exposure on the server, which was investigated and confirmed as F5.
